@@ -110,6 +110,8 @@ class Tabs extends View
             $this->addClass($this->content);
             $this->content = null;
         }
+        
+        $this->js(true,null,'#' . $this->name . ' .item')->tab('change tab', $this->activeTabName);
 
         parent::renderView();
     }
